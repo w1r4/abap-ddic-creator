@@ -194,14 +194,14 @@ TYPE-POOLS: vrm, cntb.
 
 SELECTION-SCREEN BEGIN OF BLOCK 001 WITH FRAME TITLE title1.
   SELECTION-SCREEN BEGIN OF LINE.
-    SELECTION-SCREEN COMMENT (6) text1 FOR FIELD p_devc.
-    SELECTION-SCREEN POSITION 10.
+    SELECTION-SCREEN COMMENT (20) text1 FOR FIELD p_devc.
+    SELECTION-SCREEN POSITION 24.
     PARAMETERS p_devc TYPE devclass.
-    SELECTION-SCREEN PUSHBUTTON 45(10) tmp USER-COMMAND tmp.
+    SELECTION-SCREEN PUSHBUTTON 60(15) tmp USER-COMMAND tmp.
   SELECTION-SCREEN END OF LINE.
   SELECTION-SCREEN BEGIN OF LINE.
-    SELECTION-SCREEN COMMENT (6) text2 FOR FIELD p_trkorr.
-    SELECTION-SCREEN POSITION 10.
+    SELECTION-SCREEN COMMENT (20) text2 FOR FIELD p_trkorr.
+    SELECTION-SCREEN POSITION 24.
     PARAMETERS p_trkorr TYPE trkorr VISIBLE LENGTH 10.
     SELECTION-SCREEN COMMENT (60) t_trkorr.
   SELECTION-SCREEN END OF LINE.
@@ -503,13 +503,16 @@ FORM selection_screen_pbo_9400.
   WRITE: '1. Before usage, create a local object to ensure it works correctly.', /.
   WRITE: '2. Field Name -> Data Element: If the "Data Element" in the [Table Fields] grid is empty, copy the "Field Name" to that column.', /.
   WRITE: '3. To Create: Indicates whether the Data Element needs to be created. Before setting the prefix, select this column.', /.
-  WRITE: '4. Data Element -> Reference Domain: If the "Data Element" in the [Table Fields] grid needs to be created and the "Reference Domain" is empty, copy the "Data Element" to "Reference Domain".', /.
-  WRITE: '5. Reference Domain -> Domain Name: If the "Data Element" in the [Table Fields] grid needs to be created and the "Reference Domain" is not empty, copy the "Reference Domain" and its settings to the [Domains] grid.', /.
+  WRITE: '4. Data Element -> Reference Domain: If the "Data Element" in the [Table Fields] grid needs to be created and the "Reference Domain" is empty,', /.
+  WRITE: '   copy the "Data Element" to "Reference Domain".', /.
+  WRITE: '5. Reference Domain -> Domain Name: If the "Data Element" in the [Table Fields] grid needs to be created and the "Reference Domain" is not empty,', /.
+  WRITE: '   copy the "Reference Domain" and its settings to the [Domains] grid.', /.
   WRITE: '6. Double-click the column headers "To Create," "Reference Domain," and "Domain Name" for special effects.', /.
   WRITE: '7. Set Prefix Uniformly: You can uniformly set/replace the prefix for "Data Element" or "Reference Domain" names, e.g., Z, ZMM, etc.', /.
   WRITE: '8. Double-click on "Data Element" or "Domain" to navigate to the corresponding SE11 screen for easy post-creation modifications.', /.
   WRITE: '9. Note the Creation Sequence: Create Domain -> Create Data Element -> Create Database Table.', /.
-  WRITE: '10. After creating the database table, it will automatically switch to the SE11 change screen. Please manually select primary keys, set foreign keys, currency fields, amount fields, etc., and then activate it.', /.
+  WRITE: '10. After creating the database table, it will automatically switch to the SE11 change screen. Please manually select primary keys,', /.
+  WRITE: '   set foreign keys, currency fields, amount fields, etc., and then activate it.', /.
   ULINE.
   WRITE: 'GitHub Repository: http://github.com/Leo-SDU', /.
   WRITE: 'WeChat Official Account: SAP Bright'.
